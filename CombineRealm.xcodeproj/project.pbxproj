@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		C4A265C923730F2B00BA1C66 /* CombineRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A265BF23730F2B00BA1C66 /* CombineRealm.framework */; };
 		C4A265D023730F2B00BA1C66 /* CombineRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A265C223730F2B00BA1C66 /* CombineRealm.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4A265DB2373102C00BA1C66 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4A265DA2373102C00BA1C66 /* RealmSwift */; };
-		C4A265DD2373102C00BA1C66 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C4A265DC2373102C00BA1C66 /* Realm */; };
 		C4A265E42373122A00BA1C66 /* ObserveChangePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265E32373122A00BA1C66 /* ObserveChangePublisher.swift */; };
 		C4A265E623731BC100BA1C66 /* ObserveElementsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265E523731BC100BA1C66 /* ObserveElementsPublisher.swift */; };
 		C4A265E82373217200BA1C66 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265E72373217200BA1C66 /* Todo.swift */; };
@@ -31,6 +29,8 @@
 		C4A26617237358A000BA1C66 /* ObserveObjectPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A26616237358A000BA1C66 /* ObserveObjectPublisher.swift */; };
 		C4A2661923735A2200BA1C66 /* ObserveObjectPublisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2661823735A2200BA1C66 /* ObserveObjectPublisherTests.swift */; };
 		C4B1ECFC2374138D003FB7B8 /* SugarSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1ECFB2374138D003FB7B8 /* SugarSyntax.swift */; };
+		C4D963D12374510F008EA645 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C4D963D02374510F008EA645 /* Realm */; };
+		C4D963D32374510F008EA645 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4D963D22374510F008EA645 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4A265DD2373102C00BA1C66 /* Realm in Frameworks */,
-				C4A265DB2373102C00BA1C66 /* RealmSwift in Frameworks */,
+				C4D963D32374510F008EA645 /* RealmSwift in Frameworks */,
+				C4D963D12374510F008EA645 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,8 +192,8 @@
 			);
 			name = CombineRealm;
 			packageProductDependencies = (
-				C4A265DA2373102C00BA1C66 /* RealmSwift */,
-				C4A265DC2373102C00BA1C66 /* Realm */,
+				C4D963D02374510F008EA645 /* Realm */,
+				C4D963D22374510F008EA645 /* RealmSwift */,
 			);
 			productName = CombineRealm;
 			productReference = C4A265BF23730F2B00BA1C66 /* CombineRealm.framework */;
@@ -248,7 +248,7 @@
 			);
 			mainGroup = C4A265B523730F2B00BA1C66;
 			packageReferences = (
-				C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				C4D963CF2374510F008EA645 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = C4A265C023730F2B00BA1C66 /* Products */;
 			projectDirPath = "";
@@ -460,7 +460,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "yaroslav-zhurakovskiy.CombineRealm";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -488,7 +488,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "yaroslav-zhurakovskiy.CombineRealm";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -567,9 +567,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		C4D963CF2374510F008EA645 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa";
+			repositoryURL = "git@github.com:realm/realm-cocoa.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.21.0;
@@ -578,15 +578,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C4A265DA2373102C00BA1C66 /* RealmSwift */ = {
+		C4D963D02374510F008EA645 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-		C4A265DC2373102C00BA1C66 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = C4D963CF2374510F008EA645 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
+		};
+		C4D963D22374510F008EA645 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4D963CF2374510F008EA645 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
