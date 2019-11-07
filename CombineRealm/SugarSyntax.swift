@@ -11,6 +11,10 @@ public extension Results {
     func observeElementsPublisher() -> ObserveElementsPublisher<Element> {
         return ObserveElementsPublisher(results: self)
     }
+    
+    func observeChangePublisher() -> ObserveChangePublisher<Element> {
+        return ObserveChangePublisher(results: self)
+    }
 }
 
 public extension Realm {
