@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4A265C923730F2B00BA1C66 /* CombineRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A265BF23730F2B00BA1C66 /* CombineRealm.framework */; };
+		C4A265D023730F2B00BA1C66 /* CombineRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A265C223730F2B00BA1C66 /* CombineRealm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4A265DB2373102C00BA1C66 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4A265DA2373102C00BA1C66 /* RealmSwift */; };
+		C4A265DD2373102C00BA1C66 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C4A265DC2373102C00BA1C66 /* Realm */; };
+		C4A265E42373122A00BA1C66 /* ObserveChangePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265E32373122A00BA1C66 /* ObserveChangePublisher.swift */; };
+		C4A265E623731BC100BA1C66 /* ObserveElementsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265E523731BC100BA1C66 /* ObserveElementsPublisher.swift */; };
+		C4A265E82373217200BA1C66 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265E72373217200BA1C66 /* Todo.swift */; };
+		C4A265EA2373218900BA1C66 /* CustomAssserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265E92373218900BA1C66 /* CustomAssserts.swift */; };
+		C4A265EC237321B400BA1C66 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265EB237321B400BA1C66 /* Helpers.swift */; };
+		C4A265EE23732B5C00BA1C66 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265ED23732B5C00BA1C66 /* Recorder.swift */; };
+		C4A266002373323300BA1C66 /* ObserveElementsPublisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A265FF2373323300BA1C66 /* ObserveElementsPublisherTests.swift */; };
+		C4A26602237332B200BA1C66 /* ObserveChangePublisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A26601237332B200BA1C66 /* ObserveChangePublisherTests.swift */; };
+		C4A266042373335D00BA1C66 /* RealmTestsCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A266032373335D00BA1C66 /* RealmTestsCase.swift */; };
+		C4A2660623733B8C00BA1C66 /* AddTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2660523733B8C00BA1C66 /* AddTests.swift */; };
+		C4A2660823733BC400BA1C66 /* AddSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2660723733BC400BA1C66 /* AddSubscriber.swift */; };
+		C4A2660A23734E0300BA1C66 /* DeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2660923734E0300BA1C66 /* DeleteTests.swift */; };
+		C4A2660C23734E7F00BA1C66 /* DeleteSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2660B23734E7F00BA1C66 /* DeleteSubscriber.swift */; };
+		C4A2660F2373500B00BA1C66 /* WriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2660E2373500B00BA1C66 /* WriteTests.swift */; };
+		C4A266112373518B00BA1C66 /* WriteSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A266102373518B00BA1C66 /* WriteSubscriber.swift */; };
+		C4A266132373541F00BA1C66 /* TryWriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A266122373541F00BA1C66 /* TryWriteTests.swift */; };
+		C4A266152373544000BA1C66 /* TryWriteSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A266142373544000BA1C66 /* TryWriteSubscriber.swift */; };
+		C4A26617237358A000BA1C66 /* ObserveObjectPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A26616237358A000BA1C66 /* ObserveObjectPublisher.swift */; };
+		C4A2661923735A2200BA1C66 /* ObserveObjectPublisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A2661823735A2200BA1C66 /* ObserveObjectPublisherTests.swift */; };
+		C4B1ECFC2374138D003FB7B8 /* SugarSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1ECFB2374138D003FB7B8 /* SugarSyntax.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4A265CA23730F2B00BA1C66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4A265B623730F2B00BA1C66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4A265BE23730F2B00BA1C66;
+			remoteInfo = CombineRealm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C4A265BF23730F2B00BA1C66 /* CombineRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4A265C223730F2B00BA1C66 /* CombineRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombineRealm.h; sourceTree = "<group>"; };
+		C4A265C323730F2B00BA1C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4A265C823730F2B00BA1C66 /* CombineRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombineRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4A265CF23730F2B00BA1C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4A265E32373122A00BA1C66 /* ObserveChangePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveChangePublisher.swift; sourceTree = "<group>"; };
+		C4A265E523731BC100BA1C66 /* ObserveElementsPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveElementsPublisher.swift; sourceTree = "<group>"; };
+		C4A265E72373217200BA1C66 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		C4A265E92373218900BA1C66 /* CustomAssserts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAssserts.swift; sourceTree = "<group>"; };
+		C4A265EB237321B400BA1C66 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		C4A265ED23732B5C00BA1C66 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		C4A265FF2373323300BA1C66 /* ObserveElementsPublisherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserveElementsPublisherTests.swift; sourceTree = "<group>"; };
+		C4A26601237332B200BA1C66 /* ObserveChangePublisherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveChangePublisherTests.swift; sourceTree = "<group>"; };
+		C4A266032373335D00BA1C66 /* RealmTestsCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTestsCase.swift; sourceTree = "<group>"; };
+		C4A2660523733B8C00BA1C66 /* AddTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTests.swift; sourceTree = "<group>"; };
+		C4A2660723733BC400BA1C66 /* AddSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscriber.swift; sourceTree = "<group>"; };
+		C4A2660923734E0300BA1C66 /* DeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTests.swift; sourceTree = "<group>"; };
+		C4A2660B23734E7F00BA1C66 /* DeleteSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSubscriber.swift; sourceTree = "<group>"; };
+		C4A2660E2373500B00BA1C66 /* WriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTests.swift; sourceTree = "<group>"; };
+		C4A266102373518B00BA1C66 /* WriteSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteSubscriber.swift; sourceTree = "<group>"; };
+		C4A266122373541F00BA1C66 /* TryWriteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryWriteTests.swift; sourceTree = "<group>"; };
+		C4A266142373544000BA1C66 /* TryWriteSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryWriteSubscriber.swift; sourceTree = "<group>"; };
+		C4A26616237358A000BA1C66 /* ObserveObjectPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveObjectPublisher.swift; sourceTree = "<group>"; };
+		C4A2661823735A2200BA1C66 /* ObserveObjectPublisherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveObjectPublisherTests.swift; sourceTree = "<group>"; };
+		C4B1ECFB2374138D003FB7B8 /* SugarSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarSyntax.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4A265BC23730F2B00BA1C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A265DD2373102C00BA1C66 /* Realm in Frameworks */,
+				C4A265DB2373102C00BA1C66 /* RealmSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4A265C523730F2B00BA1C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A265C923730F2B00BA1C66 /* CombineRealm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4A265B523730F2B00BA1C66 = {
+			isa = PBXGroup;
+			children = (
+				C4A265C123730F2B00BA1C66 /* CombineRealm */,
+				C4A265CC23730F2B00BA1C66 /* CombineRealmTests */,
+				C4A265C023730F2B00BA1C66 /* Products */,
+				C4A265DE2373104200BA1C66 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C4A265C023730F2B00BA1C66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4A265BF23730F2B00BA1C66 /* CombineRealm.framework */,
+				C4A265C823730F2B00BA1C66 /* CombineRealmTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4A265C123730F2B00BA1C66 /* CombineRealm */ = {
+			isa = PBXGroup;
+			children = (
+				C4A265C223730F2B00BA1C66 /* CombineRealm.h */,
+				C4A265C323730F2B00BA1C66 /* Info.plist */,
+				C4A265E32373122A00BA1C66 /* ObserveChangePublisher.swift */,
+				C4A265E523731BC100BA1C66 /* ObserveElementsPublisher.swift */,
+				C4A26616237358A000BA1C66 /* ObserveObjectPublisher.swift */,
+				C4A2660723733BC400BA1C66 /* AddSubscriber.swift */,
+				C4A2660B23734E7F00BA1C66 /* DeleteSubscriber.swift */,
+				C4A266102373518B00BA1C66 /* WriteSubscriber.swift */,
+				C4A266142373544000BA1C66 /* TryWriteSubscriber.swift */,
+				C4B1ECFB2374138D003FB7B8 /* SugarSyntax.swift */,
+			);
+			path = CombineRealm;
+			sourceTree = "<group>";
+		};
+		C4A265CC23730F2B00BA1C66 /* CombineRealmTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4A2660D23734FF300BA1C66 /* Cases */,
+				C4A265E72373217200BA1C66 /* Todo.swift */,
+				C4A265E92373218900BA1C66 /* CustomAssserts.swift */,
+				C4A265EB237321B400BA1C66 /* Helpers.swift */,
+				C4A265ED23732B5C00BA1C66 /* Recorder.swift */,
+				C4A265CF23730F2B00BA1C66 /* Info.plist */,
+			);
+			path = CombineRealmTests;
+			sourceTree = "<group>";
+		};
+		C4A265DE2373104200BA1C66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4A2660D23734FF300BA1C66 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				C4A266032373335D00BA1C66 /* RealmTestsCase.swift */,
+				C4A265FF2373323300BA1C66 /* ObserveElementsPublisherTests.swift */,
+				C4A26601237332B200BA1C66 /* ObserveChangePublisherTests.swift */,
+				C4A2661823735A2200BA1C66 /* ObserveObjectPublisherTests.swift */,
+				C4A2660523733B8C00BA1C66 /* AddTests.swift */,
+				C4A2660923734E0300BA1C66 /* DeleteTests.swift */,
+				C4A2660E2373500B00BA1C66 /* WriteTests.swift */,
+				C4A266122373541F00BA1C66 /* TryWriteTests.swift */,
+			);
+			name = Cases;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C4A265BA23730F2B00BA1C66 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A265D023730F2B00BA1C66 /* CombineRealm.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C4A265BE23730F2B00BA1C66 /* CombineRealm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4A265D323730F2B00BA1C66 /* Build configuration list for PBXNativeTarget "CombineRealm" */;
+			buildPhases = (
+				C4A265BA23730F2B00BA1C66 /* Headers */,
+				C4A265BB23730F2B00BA1C66 /* Sources */,
+				C4A265BC23730F2B00BA1C66 /* Frameworks */,
+				C4A265BD23730F2B00BA1C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CombineRealm;
+			packageProductDependencies = (
+				C4A265DA2373102C00BA1C66 /* RealmSwift */,
+				C4A265DC2373102C00BA1C66 /* Realm */,
+			);
+			productName = CombineRealm;
+			productReference = C4A265BF23730F2B00BA1C66 /* CombineRealm.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C4A265C723730F2B00BA1C66 /* CombineRealmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4A265D623730F2B00BA1C66 /* Build configuration list for PBXNativeTarget "CombineRealmTests" */;
+			buildPhases = (
+				C4A265C423730F2B00BA1C66 /* Sources */,
+				C4A265C523730F2B00BA1C66 /* Frameworks */,
+				C4A265C623730F2B00BA1C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4A265CB23730F2B00BA1C66 /* PBXTargetDependency */,
+			);
+			name = CombineRealmTests;
+			packageProductDependencies = (
+			);
+			productName = CombineRealmTests;
+			productReference = C4A265C823730F2B00BA1C66 /* CombineRealmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4A265B623730F2B00BA1C66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Yaroslav Zhurakovskiy";
+				TargetAttributes = {
+					C4A265BE23730F2B00BA1C66 = {
+						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
+					};
+					C4A265C723730F2B00BA1C66 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = C4A265B923730F2B00BA1C66 /* Build configuration list for PBXProject "CombineRealm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4A265B523730F2B00BA1C66;
+			packageReferences = (
+				C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
+			productRefGroup = C4A265C023730F2B00BA1C66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4A265BE23730F2B00BA1C66 /* CombineRealm */,
+				C4A265C723730F2B00BA1C66 /* CombineRealmTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4A265BD23730F2B00BA1C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4A265C623730F2B00BA1C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4A265BB23730F2B00BA1C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A2660C23734E7F00BA1C66 /* DeleteSubscriber.swift in Sources */,
+				C4A265E623731BC100BA1C66 /* ObserveElementsPublisher.swift in Sources */,
+				C4A2660823733BC400BA1C66 /* AddSubscriber.swift in Sources */,
+				C4A265E42373122A00BA1C66 /* ObserveChangePublisher.swift in Sources */,
+				C4A266112373518B00BA1C66 /* WriteSubscriber.swift in Sources */,
+				C4B1ECFC2374138D003FB7B8 /* SugarSyntax.swift in Sources */,
+				C4A26617237358A000BA1C66 /* ObserveObjectPublisher.swift in Sources */,
+				C4A266152373544000BA1C66 /* TryWriteSubscriber.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4A265C423730F2B00BA1C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A266042373335D00BA1C66 /* RealmTestsCase.swift in Sources */,
+				C4A265EE23732B5C00BA1C66 /* Recorder.swift in Sources */,
+				C4A2661923735A2200BA1C66 /* ObserveObjectPublisherTests.swift in Sources */,
+				C4A266002373323300BA1C66 /* ObserveElementsPublisherTests.swift in Sources */,
+				C4A265E82373217200BA1C66 /* Todo.swift in Sources */,
+				C4A266132373541F00BA1C66 /* TryWriteTests.swift in Sources */,
+				C4A265EA2373218900BA1C66 /* CustomAssserts.swift in Sources */,
+				C4A2660A23734E0300BA1C66 /* DeleteTests.swift in Sources */,
+				C4A2660623733B8C00BA1C66 /* AddTests.swift in Sources */,
+				C4A2660F2373500B00BA1C66 /* WriteTests.swift in Sources */,
+				C4A265EC237321B400BA1C66 /* Helpers.swift in Sources */,
+				C4A26602237332B200BA1C66 /* ObserveChangePublisherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4A265CB23730F2B00BA1C66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4A265BE23730F2B00BA1C66 /* CombineRealm */;
+			targetProxy = C4A265CA23730F2B00BA1C66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C4A265D123730F2B00BA1C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4A265D223730F2B00BA1C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4A265D423730F2B00BA1C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CombineRealm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yaroslav-zhurakovskiy.CombineRealm";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4A265D523730F2B00BA1C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CombineRealm/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yaroslav-zhurakovskiy.CombineRealm";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C4A265D723730F2B00BA1C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CombineRealmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yaroslav-zhurakovskiy.CombineRealmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4A265D823730F2B00BA1C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CombineRealmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yaroslav-zhurakovskiy.CombineRealmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4A265B923730F2B00BA1C66 /* Build configuration list for PBXProject "CombineRealm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4A265D123730F2B00BA1C66 /* Debug */,
+				C4A265D223730F2B00BA1C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4A265D323730F2B00BA1C66 /* Build configuration list for PBXNativeTarget "CombineRealm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4A265D423730F2B00BA1C66 /* Debug */,
+				C4A265D523730F2B00BA1C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4A265D623730F2B00BA1C66 /* Build configuration list for PBXNativeTarget "CombineRealmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4A265D723730F2B00BA1C66 /* Debug */,
+				C4A265D823730F2B00BA1C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4A265DA2373102C00BA1C66 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		C4A265DC2373102C00BA1C66 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4A265D92373102C00BA1C66 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C4A265B623730F2B00BA1C66 /* Project object */;
+}
