@@ -29,7 +29,7 @@ class ObserveElementsPublisherTestsBase: RealmTestsCase {
     }
     
     func testObserveElementsOfResultsSugarSyntaxObservePublisher() throws {
-        let publisher = realm.observePublisher(Todo.self)
+        let publisher = realm.objectsPublisher(Todo.self)
         try runTestObserveElementsOfResults(for: publisher)
     }
     

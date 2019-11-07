@@ -18,7 +18,7 @@ public extension Results {
 }
 
 public extension Realm {
-    func observePublisher<Element: Object>(_ type: Element.Type) -> ObserveElementsPublisher<Element> {
+    func objectsPublisher<Element: Object>(_ type: Element.Type) -> ObserveElementsPublisher<Element> {
         return objects(type).observeElementsPublisher()
     }
 }
