@@ -10,6 +10,7 @@ CombineRealm is avaialble via [Carthage](https://github.com/Carthage/Carthage) o
 ## Requirements
 * iOS 13.0+
 * Swift 5+
+* Realm 3.21.0+
 * Carthage 0.18+ (if you use)
 ## Carthage
 To install CombineRealm with Carthage, add the following line to your Cartfile.
