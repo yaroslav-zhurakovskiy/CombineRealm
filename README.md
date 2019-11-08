@@ -1,3 +1,7 @@
+[![License](https://img.shields.io/github/license/yaroslav-zhurakovskiy/CombineRealm)](https://raw.githubusercontent.com/yaroslav-zhurakovskiy/CombineRealm/master/LICENSE)
+[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 [![Build Status](https://travis-ci.org/yaroslav-zhurakovskiy/CombineRealm.svg?branch=master)](https://travis-ci.org/yaroslav-zhurakovskiy/CombineRealm) [![codecov](https://codecov.io/gh/yaroslav-zhurakovskiy/CombineRealm/branch/master/graph/badge.svg)](https://codecov.io/gh/yaroslav-zhurakovskiy/CombineRealm)
 
 # CombineRealm
