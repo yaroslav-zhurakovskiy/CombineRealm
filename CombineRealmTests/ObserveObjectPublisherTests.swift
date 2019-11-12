@@ -101,12 +101,16 @@ class ObserveObjectPublisherTests: RealmTestsCase {
             recorder.cancel()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                try! self.realm.write {
-                    todo.title = ""
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    expectation.fulfill()
+                do {
+                    try self.realm.write {
+                        todo.title = ""
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        expectation.fulfill()
+                    }
+                } catch let error {
+                    XCTFail(error.localizedDescription)
                 }
             }
         }
@@ -142,7 +146,6 @@ func assertDeleted(
         return
     }
 }
-
 
 func assert(
     _ change: ObserveObjectPublisher.ObjectChange,

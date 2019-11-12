@@ -127,16 +127,20 @@ class ObserveChangePublisherTests: RealmTestsCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             recorder.cancel()
              
-            try! self.realm.write {
-                self.realm.add(todo3)
-            }
-            
-            try! self.realm.write {
-                self.realm.add(todo4)
-            }
-             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                expectation.fulfill()
+            do {
+                try self.realm.write {
+                    self.realm.add(todo3)
+                }
+                
+                try self.realm.write {
+                    self.realm.add(todo4)
+                }
+                 
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    expectation.fulfill()
+                }
+            } catch let error {
+                XCTFail(error.localizedDescription)
             }
          }
         

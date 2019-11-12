@@ -126,23 +126,26 @@ class ObserveElementsPublisherTestsBase: RealmTestsCase {
             realm.add(todo1)
             realm.add(todo2)
         }
-                
-        
+                  
         let expectation = self.expectation(description: #function)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             recorder.cancel()
             
-            try! self.realm.write {
-                self.realm.add(todo3)
-            }
-           
-            try! self.realm.write {
-                self.realm.add(todo4)
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                expectation.fulfill()
+            do {
+                try self.realm.write {
+                    self.realm.add(todo3)
+                }
+               
+                try self.realm.write {
+                    self.realm.add(todo4)
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    expectation.fulfill()
+                }
+            } catch let error {
+                XCTFail(error.localizedDescription)
             }
         }
         
@@ -156,4 +159,3 @@ class ObserveElementsPublisherTestsBase: RealmTestsCase {
         }
     }
 }
-

@@ -41,17 +41,7 @@ class AddTests: RealmTestsCase {
     }
     
     func testAddToDefaultRealm() throws {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let add = Realm.Add()
         add.store(in: &cancellables)
         let todo1 = Todo("Todo 1")
@@ -59,7 +49,7 @@ class AddTests: RealmTestsCase {
         Publishers.Sequence(sequence: [todo1, todo2])
            .subscribe(add)
 
-        let realm = try! createTestRealm(identifier: #function)
+        let realm = try createTestRealm(identifier: #function)
         let todos = realm.objects(Todo.self)
         assert(Array(todos), contains: [todo1, todo2])
     }
@@ -76,18 +66,8 @@ class AddTests: RealmTestsCase {
         assert(Array(todos), contains: [todo1, todo2])
     }
     
-    func testAddToDefaultRealmSugarSyntax() {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+    func testAddToDefaultRealmSugarSyntax() throws {
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let todo1 = Todo("Todo 1")
         let todo2 = Todo("Todo 2")
       
@@ -95,7 +75,7 @@ class AddTests: RealmTestsCase {
             .addToRealm()
             .store(in: &cancellables)
           
-        let realm = try! createTestRealm(identifier: #function)
+        let realm = try createTestRealm(identifier: #function)
         let todos = realm.objects(Todo.self)
         XCTAssertEqual(todos.count, 2)
         assert(Array(todos), contains: [todo1, todo2])

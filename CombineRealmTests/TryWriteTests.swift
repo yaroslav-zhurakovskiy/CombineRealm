@@ -46,17 +46,7 @@ class TryWriteTests: RealmTestsCase {
     }
     
     func testTryWriteToDefaultRealm() throws {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let updatedTitle = "UPDATED"
         let write = Realm.TryWrite<Todo>(writeBlock: { realm, todo in
             todo.title = updatedTitle
@@ -69,7 +59,6 @@ class TryWriteTests: RealmTestsCase {
 
         Publishers.Sequence(sequence: [todo1, todo2])
             .subscribe(write)
-
 
         let realm = try createTestRealm(identifier: #function)
         let todos = realm.objects(Todo.self)
@@ -98,17 +87,7 @@ class TryWriteTests: RealmTestsCase {
     }
     
     func testTryWriteToDefaultRealmSugarSyntax() throws {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let updatedTitle = "UPDATED"
         let todo1 = Todo("Todo 1")
         let todo2 = Todo("Todo 2")
@@ -120,7 +99,6 @@ class TryWriteTests: RealmTestsCase {
                 try throwErrorDummy() // Check if block accepts errors
             }
             .store(in: &cancellables)
-
 
         let realm = try createTestRealm(identifier: #function)
         let todos = realm.objects(Todo.self)
@@ -187,4 +165,3 @@ class TryWriteTests: RealmTestsCase {
          XCTAssertEqual(recordedErors[0] as NSError, thrownError)
     }
 }
-

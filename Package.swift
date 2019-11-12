@@ -5,10 +5,10 @@ import PackageDescription
 let package = Package(
     name: "CombineRealm",
     platforms: [
-        .iOS("13.0"),
+        .iOS("13.0")
     ],
     products: [
-        .library(name: "CombineRealm", targets: ["CombineRealm"]),
+        .library(name: "CombineRealm", targets: ["CombineRealm"])
     ],
     dependencies: [
         .package(

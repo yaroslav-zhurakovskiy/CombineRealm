@@ -75,4 +75,3 @@ public extension Publisher where Output: Object, Failure == Never {
         return AnyCancellable(subscriber)
     }
 }
-

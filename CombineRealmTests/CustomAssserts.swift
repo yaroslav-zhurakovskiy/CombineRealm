@@ -50,7 +50,6 @@ func assertUpdate(_ change: TodoResultsChange, file: StaticString = #file, line:
     }
 }
 
-
 func assert(
     _ change: TodoResultsChange,
     isUpdateWithValue expectedValue: [Todo],
@@ -68,7 +67,6 @@ func assert(
        )
     }
 }
-
 
 func assertEqual(
     _ values: [Todo],

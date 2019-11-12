@@ -70,7 +70,6 @@ extension Realm {
     }
 }
 
-
 public extension Publisher where Output: RealmSwift.Object, Failure == Never {
     func add(to realm: Realm) -> AnyCancellable {
         let subscriber = Realm.Add<Output>(realm: realm)

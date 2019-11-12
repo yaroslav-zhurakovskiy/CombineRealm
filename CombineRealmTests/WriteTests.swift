@@ -37,8 +37,7 @@ class WriteTests: RealmTestsCase {
         
         Publishers.Sequence(sequence: [todo1, todo2])
             .subscribe(write)
-        
-        
+          
         let todos = realm.objects(Todo.self)
         XCTAssertEqual(todos.count, 2)
         XCTAssertEqual(todos[0].title, updatedTitle)
@@ -46,17 +45,7 @@ class WriteTests: RealmTestsCase {
     }
     
     func testWriteToDefaultRealm() throws {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let updatedTitle = "UPDATED"
         let write = Realm.Write<Todo>(writeBlock: { realm, todo in
             todo.title = updatedTitle
@@ -68,7 +57,6 @@ class WriteTests: RealmTestsCase {
 
         Publishers.Sequence(sequence: [todo1, todo2])
             .subscribe(write)
-
 
         let realm = try createTestRealm(identifier: #function)
         let todos = realm.objects(Todo.self)
@@ -96,17 +84,7 @@ class WriteTests: RealmTestsCase {
     }
     
     func testWriteToDefaultRealmSugarSyntax() throws {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let updatedTitle = "UPDATED"
         let todo1 = Todo("Todo 1")
         let todo2 = Todo("Todo 2")
@@ -117,7 +95,6 @@ class WriteTests: RealmTestsCase {
                 realm.add(todo)
             }
             .store(in: &cancellables)
-
 
         let realm = try createTestRealm(identifier: #function)
         let todos = realm.objects(Todo.self)

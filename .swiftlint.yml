@@ -1,0 +1,75 @@
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - shorthand_operator
+  - notification_center_detachment
+  - force_cast
+  - todo
+  - valid_ibinspectable
+  - for_where
+opt_in_rules: # some rules are only opt-in
+  #- missing_docs
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Pomodoro/Common_UI_Elements/MultiSelectSegmentedControl.swift
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+line_length:
+  warning: 120
+  error: 140
+# they can set both implicitly with an array
+type_body_length:
+  - 500 # warning
+  - 1000 # error
+# or they can set both explicitly
+file_length:
+  warning: 600
+  error: 1200
+
+function_parameter_count:
+  warning: 7
+  error: 10
+
+function_body_length:
+  warning: 80
+  error: 160
+
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 3 # only warning
+  max_length: # warning and error
+    warning: 250
+    error: 350
+identifier_name:
+  min_length: # only min_length
+    error: 3 # only error
+  max_length:
+    warning: 75
+    error: 150
+  excluded:
+    - ip
+    - id
+    - URL
+    - GlobalAPIKey
+    - vc
+    - v1
+    - v2
+    - at
+    - on
+    - to
+    - x
+    - y
+    - db
+    - in
+large_tuple: 3
+reporter: "xcode"
+
+nesting:
+    type_level: 2

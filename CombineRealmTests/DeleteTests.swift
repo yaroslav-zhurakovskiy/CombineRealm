@@ -45,17 +45,7 @@ class DeleteTests: RealmTestsCase {
     }
     
     func testDeleteFromDefaultRealm() throws {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let delete = Realm.Delete()
         delete.store(in: &cancellables)
         let todo1 = Todo("Todo 1")
@@ -92,17 +82,7 @@ class DeleteTests: RealmTestsCase {
     }
     
     func testDeleteFromDefaultRealmSugarSyntax() throws {
-        let oldDefaultConfig = Realm.Configuration.defaultConfiguration
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            inMemoryIdentifier: #function
-        )
-        defer {
-            let realm = try! createTestRealm(identifier: #function)
-            try! realm.write {
-                realm.deleteAll()
-            }
-            Realm.Configuration.defaultConfiguration = oldDefaultConfig
-        }
+        setDefaultRealmConfiguration(inMemoryIdentifier: #function)
         let todo1 = Todo("Todo 1")
         let todo2 = Todo("Todo 2")
         let realm = try createTestRealm(identifier: #function)
