@@ -1,3 +1,6 @@
+install:
+    - ./Scripts/fix_ssh_fingerprint.sh
+    - ./Scripts/install_swiftlint.sh
 language: swift
 xcode_project: CombineRealm.xcodeproj
 xcode_scheme: CombineRealm
@@ -5,5 +8,3 @@ osx_image: xcode11.1
 xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 8
 after_success:
     - bash <(curl -s https://codecov.io/bash) -t d1799a7c-2973-411a-a165-02161f5b2456
-install:
-    - ./Scripts/install_swiftlint.sh
